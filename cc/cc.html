@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>張晰鈞自我介紹</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+
+        @media (min-width: 1100px){
+            .home{
+            /* display: flex; */
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(to top, #D2E2FB 30%, #86A8DB);
+            position: relative;
+            overflow: hidden;
+            z-index: 100;
+        }
+            .home img{
+                width: 100%;
+                position: absolute;
+                bottom: 0px;
+                pointer-events: none;
+            }
+
+            .sun{
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                top: 10%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: yellow;
+                border-radius: 50px;
+                font-size: 50px;
+                
+            }
+
+            .home-link{
+                color: #fff;
+                font-size: 50px;
+                position: absolute;
+                top: 50px;
+                left: 50px;
+            }
+
+            .about{
+                padding: 100px 50px 50px 50px;
+                background-color: #3b2f8e;
+                color: #fff;
+            }
+
+            .about .title{
+                display: flex;
+                justify-content: center;
+                font-size: 40px;
+            }
+
+            .about .item{
+                /* background-color: black; */
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 100px 0;
+            }
+
+            .im{
+                /* background-color: #D2E2FB; */
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .text{
+                width: 100%;
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 1100px){
+            .home{
+            /* display: flex; */
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(to top, #D2E2FB 30%, #86A8DB);
+            position: relative;
+            overflow: hidden;
+            z-index: 100;
+        }
+            .home img{
+                width: 100vw;
+                position: absolute;
+                bottom: 0px;
+                pointer-events: none;
+            }
+
+            .sun{
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: yellow;
+                border-radius: 50px;
+                font-size: 50px;
+                
+            }
+
+            .home-link{
+                color: #fff;
+                font-size: 50px;
+                position: absolute;
+                top: 50px;
+                left: 50px;
+            }
+
+            .about{
+                padding: 50px;
+                background-color: #3b2f8e;
+                color: #fff;
+            }
+
+            .about .title{
+                display: flex;
+                flex-direction: column;
+                /* justify-content: center; */
+                align-items: center;
+                font-size: 40px;
+            }
+
+            .about .item{
+                /* background-color: black; */
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .im{
+                /* background-color: #D2E2FB; */
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .text{
+                width: 100%;
+                font-size: 30px;
+            }
+
+            .about img{
+                width: 100%;
+            }
+        }
+
+        @media (min-width: 600px) and (max-width: 1099px){
+            .about img{
+                width: 45%;
+            }
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <div class="home">
+        <div class="sun"></div>
+        <a href="car.html" class="home-link">
+            <i class="fas fa-home"></i>
+        </a>
+        <img src="mount2.png" alt="" class="mount2">
+        <img src="mount1.png" alt="" class="mount1">
+        <img src="bush2.png" alt="" class="bush2">
+        <img src="bush1.png" alt="" class="bush1">
+        <img src="leaf1.png" alt="" class="leaf1">
+        <img src="leaf2.png" alt="" class="leaf2">
+    </div>
+
+    <section class="about">
+        <div class="title"><h1>自我介紹</h1></div>
+        <div class="item">
+            <div class="im"><img src="g.png" alt=""></div>
+            <div class="text">
+                <p>大家好！我是張晰鈞我是個樂觀開朗的人，生活中喜歡隨心而行，想到什麼就嘗試什麼，這讓我的生活充滿了自由和驚喜。雖然我的個性比較隨和，但在需要認真的時候，我也會展現出我負責和專注的一面。我相信生活不該被壓力所綁架，而是應該追求自由和快樂。我希望透過自己的態度，影響身邊的每一個人一起用輕鬆而認真的方式面對生活的每一天！</p>
+            </div>
+            
+            
+        </div>
+        
+    </section>
+
+    <script>
+        const sun = document.querySelector(".sun")
+        const leaf1 = document.querySelector(".leaf1")
+        const leaf2 = document.querySelector(".leaf2")
+        const bush1 = document.querySelector(".bush1")
+        const bush2 = document.querySelector(".bush2")
+        const mount1 = document.querySelector(".mount1")
+        const mount2 = document.querySelector(".mount2") 
+
+        document.addEventListener("scroll", function(){
+            let value = window.scrollY
+            console.log("value")
+            sun.style.marginTop = value * 2 + 'px'
+
+            leaf1.style.marginLeft = -value + 'px'
+            leaf2.style.marginLeft = value + 'px'
+
+            bush2.style.marginBottom = -value + 'px'
+
+            mount1.style.marginBottom = -value *1.2 +'px'
+            mount2.style.marginBottom = -value *1.8 +'px'
+        })
+    </script>
+</body>
+</html>
